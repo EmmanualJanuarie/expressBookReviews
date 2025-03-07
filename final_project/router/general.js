@@ -49,9 +49,9 @@ public_users.get('/books/isbn/:isbn', async (req, res) => {
   const isbn = req.params.isbn; // Get the ISBN from the URL parameters
 
   try {
-      // Replace with your actual API endpoint
+      //API endpoint
       const response = await axios.get(`/books/isbn/${isbn}`);
-      const book = response.data; // Assuming the API returns the book details in the response data
+      const book = response.data; // API returns the book details in the response data
 
       if (book) {
           return res.status(200).json(book); // Send the book details as a response
